@@ -17,4 +17,8 @@ public class Mechanic {
 		return MechanicCatalog;
 	}
 
+	public void addTask(Task aTask) {
+		tasks.add(aTask);
+	}
+
 }
