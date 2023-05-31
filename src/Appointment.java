@@ -21,9 +21,9 @@ public class Appointment {
 		return appointmentCatalog;
 	}
 
-	public ArrayList<Appointment> getAvailableAppointments(String date) {
-		// Return available appointments
-	}
+//	public ArrayList<Appointment> getAvailableAppointments(String date) {
+//		// Return available appointments
+//	}
 
 	public int getId() {
 		return id;
