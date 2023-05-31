@@ -4,7 +4,7 @@ public class RepairFolder {
 
 	// Attributes
 	private int id;
-	private ArrayList<Object> replacementParts;
+	private ArrayList<ReplacementPart> replacementParts = new ArrayList<>();
 	private boolean isCompleted;
 	private String estimatedTime;
 	private boolean isApproved;
@@ -17,9 +17,8 @@ public class RepairFolder {
 	static ArrayList<RepairFolder> repairFolderCatalog;
 
 	// Constructor
-	public RepairFolder(Vehicle vehicle, Customer customer) {
-		this.vehicle = vehicle;
-		this.customer = customer;
+	public RepairFolder() {
+		
 
 		// Default initialization
 		isCompleted = false;
@@ -52,6 +51,10 @@ public class RepairFolder {
 		for (Task task : tasks) {
 			totalCost += task.getCost();
 		}
+		
+		for(ReplacementPart part : replacementParts) {
+			totalCost+= part.getPrice();
+		}
 
 		return totalCost;
 	}
@@ -78,6 +81,10 @@ public class RepairFolder {
 
 	public void emailFolder() {
 		// Send folder via email
+	}
+	
+	public void printFolder() {
+		System.out.println("Duration: "+estimatedTime + "  Total Cost: "+ getTotalCost());
 	}
 
 }
