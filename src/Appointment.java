@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Appointment {
 	// Attributes
@@ -14,7 +15,7 @@ public class Appointment {
 		this.date = date;
 		this.time = time;
 		this.phoneNumber = phoneNumber;
-		
+
 		addToCatalog(this);
 	}
 
@@ -23,9 +24,16 @@ public class Appointment {
 		return appointmentCatalog;
 	}
 
-//	public ArrayList<Appointment> getAvailableAppointments(String date) {
-//		// Return available appointments
-//	}
+	public ArrayList<Appointment> getAvailableAppointments(String date) {
+		// Return available appointments
+		int randomNum = ThreadLocalRandom.current().nextInt(1, 11);
+		if (randomNum % 2 == 0) {
+			return Appointment.getAppointmentCatalog();
+		}
+		
+		System.out.println("No available appointments");
+		return null;
+	}
 
 	public int getId() {
 		return id;
