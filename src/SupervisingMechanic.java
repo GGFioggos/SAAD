@@ -13,5 +13,9 @@ public class SupervisingMechanic extends Mechanic {
 		folder.setCompleted(true);
 	}
 
-	// registerReplacementPart
+	public void registerReplacementPart(RepairFolder folder, ReplacementPart part, int quantity) {
+		for (int i = 0; i < quantity; i++) {
+			folder.addReplacementPart(part);
+		}
+	}
 }
