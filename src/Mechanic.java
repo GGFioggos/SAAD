@@ -21,4 +21,9 @@ public class Mechanic {
 		tasks.add(aTask);
 	}
 
+	public static ArrayList<Task> getTasks() {
+		return tasks;
+	}
+
+	
 }
