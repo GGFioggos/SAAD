@@ -14,11 +14,10 @@ public class RepairFolder {
 
 	private ArrayList<Task> tasks = new ArrayList<>();
 
-	static ArrayList<RepairFolder> repairFolderCatalog;
+	private static ArrayList<RepairFolder> repairFolderCatalog;
 
 	// Constructor
 	public RepairFolder() {
-		
 
 		// Default initialization
 		isCompleted = false;
