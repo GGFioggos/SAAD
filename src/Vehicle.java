@@ -12,6 +12,8 @@ public class Vehicle {
 		this.model = model;
 		this.year = year;
 		this.manufacturer = manufacturer;
+		
+		addtoCatalog(this);
 	}
 
 	public String getLicensePlate() {

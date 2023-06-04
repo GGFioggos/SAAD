@@ -19,6 +19,8 @@ public class Customer {
 		this.email = email;
 		this.address = address;
 		this.vehicles = new ArrayList<Vehicle>();
+		
+		addToCatalog(this);
 	}
 
 	// Methods

@@ -14,6 +14,8 @@ public class Appointment {
 		this.date = date;
 		this.time = time;
 		this.phoneNumber = phoneNumber;
+		
+		addToCatalog(this);
 	}
 
 	// Methods
