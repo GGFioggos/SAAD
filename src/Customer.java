@@ -10,7 +10,7 @@ public class Customer {
 	private int id;
 
 	private ArrayList<Vehicle> vehicles;
-	static ArrayList<Customer> customerCatalog;
+	private static ArrayList<Customer> customerCatalog;
 
 	// Constructor
 	public Customer(String fullName, String phoneNumber, String email, String address) {
@@ -22,7 +22,7 @@ public class Customer {
 	}
 
 	// Methods
-	public ArrayList<Customer> getCustomerCatalog() {
+	public static ArrayList<Customer> getCustomerCatalog() {
 		return customerCatalog;
 	}
 

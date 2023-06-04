@@ -7,7 +7,7 @@ public class Appointment {
 	private String phoneNumber;
 	private int id;
 
-	static ArrayList<Appointment> appointmentCatalog;
+	private static ArrayList<Appointment> appointmentCatalog;
 
 	// Constructor
 	public Appointment(String date, String time, String phoneNumber) {
@@ -17,7 +17,7 @@ public class Appointment {
 	}
 
 	// Methods
-	public ArrayList<Appointment> getAppointmentCatalog() {
+	public static ArrayList<Appointment> getAppointmentCatalog() {
 		return appointmentCatalog;
 	}
 
