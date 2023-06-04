@@ -5,7 +5,7 @@ public class Vehicle {
 	private String model;
 	private int year;
 	private String manufacturer;
-	static ArrayList<Vehicle> vehiclesCatalog = new ArrayList<>();
+	private static ArrayList<Vehicle> vehiclesCatalog = new ArrayList<>();
 
 	public Vehicle(String licensePlate, String model, int year, String manufacturer) {
 		this.licensePlate = licensePlate;

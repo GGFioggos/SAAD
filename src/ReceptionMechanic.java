@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class ReceptionMechanic extends Mechanic {
 
@@ -8,7 +9,24 @@ public class ReceptionMechanic extends Mechanic {
 	public void submitFolder(RepairFolder folder) {
 		folder.setApproved(true);
 	}
-	// searchVehicle
-	// registerTimeandPart
-
+	
+	public Vehicle searchVehicle(String licencePlate) {
+		ArrayList<Vehicle> vehicles = Vehicle.getVehiclesCatalog();
+		
+		for (Vehicle vehicle: vehicles) {
+			if (vehicle.getLicensePlate() == licencePlate) {
+				return vehicle;
+			}
+		}
+		System.out.println("No vehicle found!");
+		return null;
+	}
+	
+	public void registerTimeAndPart(RepairFolder folder, ReplacementPart part, int quantity, String time) {
+		folder.setEstimatedTime(time);
+		
+		for (int i = 0; i < quantity; i++) {
+			folder.addReplacementPart(part);
+		}
+	}
 }
