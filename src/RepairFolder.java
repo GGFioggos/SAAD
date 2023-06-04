@@ -83,7 +83,7 @@ public class RepairFolder {
 	}
 	
 	public void printFolder() {
-		System.out.println("Duration: "+estimatedTime + "  Total Cost: "+ getTotalCost());
+		System.out.println("Duration: "+estimatedTime + "  Total Cost: "+ getTotalCost() +"$");
 	}
 
 }
